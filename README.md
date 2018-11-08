@@ -20,3 +20,4 @@ I assumed that the user wants the number clickable when shown back to them norma
 
 For telephone normalization help: https://support.twilio.com/hc/en-us/articles/223183008-Formatting-International-Phone-Numbers
 
+For regex: https://stackoverflow.com/questions/24859717/javascript-string-remove-white-spaces-and-hyphens
