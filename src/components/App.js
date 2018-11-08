@@ -10,7 +10,7 @@ class App extends Component {
       formatted: ''
     };
 
-    this.onInputChange = this.onInputChange.bind( this );
+    this.onInputChange = this.onInputChange.bind( this );    
     this.onSubmit = this.onSubmit.bind( this );
   }
 
@@ -22,11 +22,14 @@ class App extends Component {
 
   onSubmit( event ) {
     event.preventDefault();
-    const phoneNumber = this.state.number.replace(/-|\s+/g, '');
-    const formattedNumber = `+1${phoneNumber}`;
-    this.setState({
-      formatted: formattedNumber
-    })
+    console.log( 'submitted' );
+    if( this.state.number.length >= 10 ) {
+      const phoneNumber = this.state.number.replace(/-|\s+/g, '');
+      const formattedNumber = `+1${phoneNumber}`;
+      this.setState({
+        formatted: formattedNumber
+      });
+    }    
   }
 
   render() {
@@ -39,7 +42,7 @@ class App extends Component {
               <input                     
                   name='phone'
                   placeholder='123 456 7890'
-                  pattern='[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}' 
+                  pattern='[0-9]{3}[ ,-][0-9]{3}[ ,-][0-9]{4}' 
                   onChange={ e => this.onInputChange( e.target.value ) } />
             </span>
             <span>
@@ -48,7 +51,7 @@ class App extends Component {
             </span>
           </form>
           <div>
-            <span>Formatted for USA: </span>
+            <span id='formatted-text'>Formatted for USA: </span>
             <a href='tel:{this.state.formatted}'>{this.state.formatted}</a>
           </div>
         </div>

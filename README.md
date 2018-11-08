@@ -14,7 +14,7 @@ I wanted my solution to look like an actual application and not something just f
 
 ## Assumptions
 
-I assumed that the user wants the number clickable when shown back to them normalized. I assumed the users would expect a clear button. I assumed there should be either spaces or hyphens between the numbers with a warning if the user didn't follow protocol. I also assumed there wouldn't be extensions and that these are normal 10-digit numbers.
+I assumed that the user wants the number clickable when shown back to them normalized. I assumed the users would expect a clear button. I assumed there should be either spaces or hyphens between the numbers with a warning if the user didn't follow protocol. I also assumed there wouldn't be extensions and that these are normal 10-digit numbers. I assumed that the app should respond to smaller screens.
 
 ## Resources
 
